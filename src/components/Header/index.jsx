@@ -1,23 +1,15 @@
-import React from "react";
+import { Button, Img, Text } from "..";
 
-import { Button, Img, Text } from "../../components";
-
-const HomepageRowtelevision = (props) => {
+const Header = () => {
   return (
-    <>
-      <div className={props.className}>
+    <header className="flex flex-col items-center justify-center w-full">
+      <div className="flex flex-row md:gap-10 items-center justify-between pr-2 w-full">
         <div className="flex flex-row gap-3 items-center justify-start pr-1 w-[14%] sm:w-full">
           <Img
             className="h-[33px]"
-            src="images/img_television.svg"
-            alt="television"
+            src="images/logo/logo2.svg"
+            alt="logo"
           />
-          <Text
-            className="sm:text-[33.25px] md:text-[39.25px] text-[43.25px] text-white-A700"
-            size="txtManropeBold4325WhiteA700"
-          >
-            {props?.boldoThree}
-          </Text>
         </div>
         <ul className="flex sm:flex-col flex-row gap-10 items-center justify-center w-auto sm:w-full">
           <li>
@@ -25,7 +17,7 @@ const HomepageRowtelevision = (props) => {
               className="text-base text-white-A700"
               size="txtOpenSansSemiBold16"
             >
-              {props?.producttext}
+              Product
             </Text>
           </li>
           <li>
@@ -33,7 +25,7 @@ const HomepageRowtelevision = (props) => {
               className="text-base text-white-A700"
               size="txtOpenSansSemiBold16"
             >
-              {props?.servicestext}
+              Services
             </Text>
           </li>
           <li>
@@ -41,7 +33,7 @@ const HomepageRowtelevision = (props) => {
               className="text-base text-white-A700"
               size="txtOpenSansSemiBold16"
             >
-              {props?.abouttext}
+              About
             </Text>
           </li>
           <li>
@@ -51,21 +43,13 @@ const HomepageRowtelevision = (props) => {
               size="md"
               variant="fill"
             >
-              {props?.loginbutton}
+              Log In
             </Button>
           </li>
         </ul>
       </div>
-    </>
+    </header>
   );
 };
 
-HomepageRowtelevision.defaultProps = {
-  boldoThree: "Boldo",
-  producttext: "Product",
-  servicestext: "Services",
-  abouttext: "About",
-  loginbutton: "Log In",
-};
-
-export default HomepageRowtelevision;
+export default Header;

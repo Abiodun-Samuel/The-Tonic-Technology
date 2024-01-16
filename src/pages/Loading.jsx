@@ -2,10 +2,10 @@ import { Img } from "../components";
 
 const Loading = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="flex h-screen w-screen items-center justify-center bg-white">
       <Img
-        src="images/logo/ttt-logo-svg"
-        alt="company logo"
+        src="images/logo/logo.svg"
+        alt="logo"
       />
     </div>
   );

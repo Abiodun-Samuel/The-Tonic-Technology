@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ErrorMessage } from "../../components/ErrorMessage";
 
 const variants = {
   fill: {
@@ -19,8 +18,6 @@ const Input = React.forwardRef(
       name = "",
       placeholder = "",
       type = "text",
-      children,
-      errors = [],
       label = "",
       prefix,
       suffix,
@@ -31,7 +28,7 @@ const Input = React.forwardRef(
       color = "white_A700",
       ...restProps
     },
-    ref,
+    ref
   ) => {
     const handleChange = (e) => {
       if (onChange) onChange(e?.target?.value);
@@ -40,9 +37,9 @@ const Input = React.forwardRef(
     return (
       <>
         <div
-          className={`${wrapClassName} 
-              ${shapes[shape] || ""} 
-              ${variants[variant]?.[color] || ""} 
+          className={`${wrapClassName}
+              ${shapes[shape] || ""}
+              ${variants[variant]?.[color] || ""}
               ${sizes[size] || ""}`}
         >
           {!!label && label}
@@ -58,13 +55,16 @@ const Input = React.forwardRef(
           />
           {!!suffix && suffix}
         </div>
-        {!!errors && <ErrorMessage errors={errors} />}
       </>
     );
-  },
+  }
 );
 
 Input.propTypes = {
+  label: PropTypes.string,
+  prefix: PropTypes.any,
+  suffix: PropTypes.any,
+  onChange: PropTypes.func,
   wrapClassName: PropTypes.string,
   className: PropTypes.string,
   name: PropTypes.string,
@@ -75,5 +75,5 @@ Input.propTypes = {
   variant: PropTypes.oneOf(["fill"]),
   color: PropTypes.oneOf(["blue_gray_900", "white_A700"]),
 };
-
+Input.displayName = "Input";
 export { Input };

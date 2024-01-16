@@ -67,3 +67,11 @@ export const articleProps = [
     author: "Monica Geller",
   },
 ];
+export const partners = [
+  "images/partners/Logo7.png",
+  "images/partners/Logo6.png",
+  "images/partners/Logo5.png",
+  "images/partners/Logo4.png",
+  "images/partners/Logo3.png",
+  "images/partners/Logo2.png",
+];
