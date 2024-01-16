@@ -6,6 +6,7 @@ import SectionTestimonial from "../../components/SectionTestimonial";
 import SectionHero from "../../components/SectionHero";
 
 const Homepage = () => {
+  
   return (
     <>
       <div className="flex flex-col items-center justify-start mx-auto w-full">

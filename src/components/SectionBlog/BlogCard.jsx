@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 
 const BlogCard = (props) => {
   return (
-    <div className={props.className}>
+    <div
+      data-aos="fade-up"
+      data-aos-delay={props.index * 50}
+      className={props.className}
+    >
       <Img
         className="h-[209px] sm:h-auto object-cover rounded-[12px] w-full"
         alt="rectangle1270"
@@ -58,6 +62,7 @@ BlogCard.propTypes = {
   author: PropTypes.string,
   authorImage: PropTypes.string,
   publishedAt: PropTypes.string,
+  index: PropTypes.number,
 };
 
 export default BlogCard;

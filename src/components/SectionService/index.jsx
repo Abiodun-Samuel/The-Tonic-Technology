@@ -7,7 +7,10 @@ import { Tab } from "../../components/Tab";
 const ServiceSection = () => {
   return (
     <>
-      <div className="flex flex-col gap-3 h-[185px] md:h-auto items-center justify-center max-w-[842px] mt-[84px] mx-auto md:px-5 w-full">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col gap-3 h-[185px] md:h-auto items-center justify-center max-w-[842px] mt-[84px] mx-auto md:px-5 w-full"
+      >
         <Text
           className="text-gray-600 text-xl w-auto"
           size="txtOpenSansRegular20"
@@ -28,6 +31,7 @@ const ServiceSection = () => {
         {serviceProps.map((props, index) => (
           <React.Fragment key={`ServiceSection${index}`}>
             <ServiceCard
+              index={index}
               className="flex flex-1 flex-col items-center justify-start pb-3 w-full"
               {...props}
             />
@@ -36,15 +40,21 @@ const ServiceSection = () => {
       </List>
 
       <div className="flex md:flex-col flex-row font-manrope md:gap-10 items-center justify-between max-w-[1100px] mt-[185px] mx-auto md:px-5 w-full">
-        <div className="md:h-[506px] h-[610px] relative w-[44%] md:w-full">
+        <div
+          data-aos="fade-up"
+          className="md:h-[506px] h-[610px] relative w-[44%] md:w-full"
+        >
           <Img
             className="absolute h-full inset-x-[0] mx-auto object-cover rounded-[24px] top-[0] w-full"
             src="images/service/service2.png"
             alt="service"
           />
-          
         </div>
-        <div className="flex sm:flex-1 flex-col gap-14 items-start justify-start w-auto sm:w-full">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={50}
+          className="flex sm:flex-1 flex-col gap-14 items-start justify-start w-auto sm:w-full"
+        >
           <div className="flex flex-col font-manrope items-center justify-start w-full">
             <div className="flex flex-col gap-10 items-start justify-start w-auto sm:w-full">
               <Text
@@ -133,7 +143,10 @@ const ServiceSection = () => {
         </div>
       </div>
       <div className="flex md:flex-col flex-row font-manrope md:gap-10 items-center justify-between max-w-[1100px] mt-[120px] mx-auto md:px-5 w-full">
-        <div className="flex md:flex-1 flex-col md:gap-10 gap-[60px] items-center justify-start w-[46%] md:w-full">
+        <div
+          data-aos="fade-up"
+          className="flex md:flex-1 flex-col md:gap-10 gap-[60px] items-center justify-start w-[46%] md:w-full"
+        >
           <Text
             className="leading-[56.00px] text-4xl sm:text-[32px] md:text-[34px] text-black-900 w-[99%] sm:w-full"
             size="txtManropeRegular36"
@@ -184,7 +197,11 @@ const ServiceSection = () => {
             ></Tab>
           </div>
         </div>
-        <div className="md:h-[523px] h-[692px] relative w-[41%] md:w-full">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={50}
+          className="md:h-[523px] h-[692px] relative w-[41%] md:w-full"
+        >
           <Img
             className="absolute h-full inset-x-[0] mx-auto object-cover rounded-[24px] top-[0] w-full"
             src="images/service/service3.png"

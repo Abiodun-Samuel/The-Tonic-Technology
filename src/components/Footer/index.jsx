@@ -4,7 +4,10 @@ const Footer = () => {
   return (
     <footer className="flex font-manrope items-center justify-center mt-[124px] md:px-5 w-full">
       <div className="flex flex-col md:gap-10 gap-[84px] items-center justify-center w-full">
-        <div className="bg-blue_gray-900 flex flex-col items-center justify-start rounded-[12px] w-[91%] md:w-full">
+        <div
+          data-aos="fade-up"
+          className="bg-blue_gray-900 flex flex-col items-center justify-start rounded-[12px] w-[91%] md:w-full"
+        >
           <div
             className="bg-cover bg-no-repeat flex flex-col h-[391px] items-center justify-start p-[72px] md:px-10 sm:px-5 w-full"
             style={{ backgroundImage: "url('images/bg/cta.svg')" }}

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const sizeClasses = {
   txtOpenSansRegular20Black900: "font-normal font-opensans",
   txtManropeRegular48Black900: "font-manrope font-normal",
@@ -34,6 +36,12 @@ const Text = ({ children, className = "", size, as, ...restProps }) => {
       {children}
     </Component>
   );
+};
+Text.propTypes = {
+  children: PropTypes.any,
+  className: PropTypes.string,
+  size: PropTypes.string,
+  as: PropTypes.string,
 };
 
 export { Text };

@@ -7,7 +7,7 @@ const SectionHero = () => {
   return (
     <>
       <div className="font-manrope md:h-[1156px] h-[798px] md:px-5 relative w-full">
-        <div className="md:h-[1156px] h-[798px] m-auto w-full">
+        <div  className="md:h-[1156px] h-[798px] m-auto w-full">
           <div className="bg-blue_gray-900 flex flex-col h-full items-center justify-end m-auto p-16 md:px-10 sm:px-5 w-full">
            <Partners/>
           </div>

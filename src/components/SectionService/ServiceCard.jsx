@@ -5,7 +5,11 @@ import PropTypes from "prop-types";
 const ServiceCard = (props) => {
   return (
     <>
-      <div className="flex flex-col gap-6 items-start justify-start w-auto md:w-full">
+      <div
+        data-aos="fade-up"
+        data-aos-delay={props.index * 50}
+        className="flex flex-col gap-6 items-start justify-start w-auto md:w-full"
+      >
         <Img
           className="h-[354px] sm:h-auto object-cover rounded-bl-[24px] rounded-br-[24px] w-[300px] md:w-full"
           alt="rectangle1270"
@@ -54,6 +58,7 @@ ServiceCard.propTypes = {
   img: PropTypes.string,
   title: PropTypes.string,
   desc: PropTypes.string,
+  index: PropTypes.number,
   linkText: PropTypes.string,
 };
 

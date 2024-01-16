@@ -4,7 +4,11 @@ import { Img, Text } from "../../components";
 const TestimonialCard = (props) => {
   return (
     <>
-      <div className={props.className}>
+      <div
+        data-aos="fade-up"
+        data-aos-delay={props.index * 50}
+        className={props.className}
+      >
         <Text
           className="leading-[36.00px] max-w-[270px] md:max-w-full text-2xl md:text-[22px] text-black-900 sm:text-xl"
           size="txtOpenSansRegular24"
@@ -45,6 +49,7 @@ TestimonialCard.propTypes = {
   profile: PropTypes.string,
   className: PropTypes.string,
   profileImg: PropTypes.string,
+  index: PropTypes.number,
 };
 
 export default TestimonialCard;

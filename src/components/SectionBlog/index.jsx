@@ -6,7 +6,10 @@ import BlogCard from "./BlogCard";
 const SectionBlog = () => {
   return (
     <>
-      <div className="flex flex-col gap-3 h-[184px] md:h-auto items-center justify-center max-w-[842px] mt-[154px] mx-auto md:px-5 w-full">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col gap-3 h-[184px] md:h-auto items-center justify-center max-w-[842px] mt-[154px] mx-auto md:px-5 w-full"
+      >
         <Text
           className="text-gray-600 text-xl w-auto"
           size="txtOpenSansRegular20"
@@ -27,6 +30,7 @@ const SectionBlog = () => {
         {articleProps.map((props, index) => (
           <React.Fragment key={`blog${index}`}>
             <BlogCard
+              index={index}
               className="flex flex-col gap-6 items-start justify-start w-[344px]"
               {...props}
             />

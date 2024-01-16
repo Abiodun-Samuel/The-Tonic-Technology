@@ -5,12 +5,19 @@ import Slider from "react-slick";
 import { settings } from "../../utils/settings";
 
 const SectionTestimonial = () => {
-  const nextSlide = () => {console.log('first')};
-  const previousSlide = () => {console.log('first')};
+  const nextSlide = () => {
+    console.log("first");
+  };
+  const previousSlide = () => {
+    console.log("first");
+  };
   return (
     <div className="bg-blue_gray-900 flex flex-col font-manrope items-center justify-start mt-[120px] p-24 md:px-10 sm:px-5 w-full">
       <div className="flex flex-col gap-14 items-start justify-start max-w-[1150px] mx-auto w-full">
-        <div className="flex sm:flex-col flex-row md:gap-10 items-start justify-between w-full">
+        <div
+          data-aos="fade-up"
+          className="flex sm:flex-col flex-row md:gap-10 items-start justify-between w-full"
+        >
           <Text
             className="leading-[72.00px] mb-[11px] text-5xl sm:text-[38px] md:text-[44px] text-white-A700"
             size="txtManropeRegular48"
@@ -47,6 +54,7 @@ const SectionTestimonial = () => {
           {testimonialProps.map((props, index) => (
             <Slider {...settings} key={`TestimonialCard${index}`}>
               <TestimonialCard
+                index={index}
                 className="bg-white-A700 flex flex-col gap-10 items-start justify-start p-10 sm:px-5 rounded-[12px] shadow-bs1 w-auto"
                 {...props}
               />
